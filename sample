@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>श्री खाटू श्याम मंदिर, परीक्षितगढ़</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #8B0000;
+    color: white;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.navbar a:hover {
+    color: #FFD700;
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1601758064223-6e63c8d54b8c') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero h1 {
+    font-size: 48px;
+}
+.hero button {
+    padding: 12px 30px;
+    background: #FFD700;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* SECTION */
+.section {
+    padding: 60px 10%;
+    text-align: center;
+}
+
+/* WELCOME */
+.welcome {
+    background: #fff5e6;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.about img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* ANNOUNCEMENT */
+.announcement {
+    background: #ffcc00;
+    padding: 20px;
+    font-weight: bold;
+}
+
+/* CONTACT */
+.contact p {
+    margin: 5px;
+}
+
+/* FOOTER */
+.footer {
+    background: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>🛕 खाटू श्याम मंदिर</div>
+    <div>
+        <a href="#">होम</a>
+        <a href="#">दर्शन</a>
+        <a href="#">आरती</a>
+        <a href="#">गैलरी</a>
+        <a href="#">संपर्क</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <div>
+        <h1>श्री खाटू श्याम मंदिर</h1>
+        <p>परीक्षितगढ़, मेरठ</p>
+        <p>🙏 जय श्री श्याम 🙏</p>
+        <button onclick="window.scrollTo(0,700)">दर्शन करें</button>
+    </div>
+</div>
+
+<!-- WELCOME -->
+<div class="section">
+    <div class="welcome">
+        <h2>🙏 स्वागत है</h2>
+        <p>
+        यह वेबसाइट श्री खाटू श्याम मंदिर, परीक्षितगढ़ के भक्तों के लिए बनाई गई है।
+        यहाँ आप दर्शन, आरती, गैलरी और मंदिर से जुड़ी सभी जानकारी प्राप्त कर सकते हैं।
+        </p>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>🕉️ मंदिर का परिचय</h2>
+    <div class="about">
+        <img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8">
+        <div>
+            <p>यह मंदिर भगवान खाटू श्याम जी को समर्पित है।</p>
+            <p>📍 स्थान: परीक्षितगढ़, मेरठ</p>
+            <p>✨ विशेषता: भक्तों की आस्था का प्रमुख केंद्र</p>
+        </div>
+    </div>
+</div>
+
+<!-- AARTI -->
+<div class="section">
+    <h2>🔔 आरती समय</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>सुबह आरती</h3>
+            <p>06:00 AM</p>
+        </div>
+        <div class="card">
+            <h3>शाम आरती</h3>
+            <p>07:00 PM</p>
+        </div>
+    </div>
+</div>
+
+<!-- GALLERY -->
+<div class="section">
+    <h2>📸 गैलरी</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1581090700227-4c4a49f0a3c5">
+        <img src="https://images.unsplash.com/photo-1590608897129-79da98d1590e">
+        <img src="https://images.unsplash.com/photo-1601758064223-6e63c8d54b8c">
+    </div>
+</div>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+    🚩 रविवार को विशेष भंडारा आयोजित किया जाएगा 🚩
+</div>
+
+<!-- CONTACT -->
+<div class="section contact">
+    <h2>📞 संपर्क करें</h2>
+    <p>📱 मोबाइल: 98XXXXXXXX</p>
+    <p>📍 स्थान: परीक्षितगढ़, मेरठ</p>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 श्री खाटू श्याम मंदिर, परीक्षितगढ़</p>
+    <p>🙏 जय श्री श्याम 🙏</p>
+</div>
+
+</body>
+</html>
