@@ -558,12 +558,17 @@
 
     /* Scroll animations */
     .reveal {
-      opacity: 0;
-      transform: translateY(24px);
+      opacity: 1;
+      transform: translateY(0);
       transition: opacity 0.65s ease, transform 0.65s ease;
     }
 
-    .reveal.visible {
+    .io-enabled .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+
+    .io-enabled .reveal.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -822,19 +827,23 @@
   </a>
 
   <script>
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.16 }
-    );
+    if ("IntersectionObserver" in window) {
+      document.body.classList.add("io-enabled");
 
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.16 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    }
   </script>
 </body>
 </html>
