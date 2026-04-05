@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Khatu Shyam Mandir, Parikshitgarh (Meerut)</title>
+  <meta
+    name="description"
+    content="Official website style page for Shri Khatu Shyam Mandir, Parikshitgarh (Meerut) with temple information, aarti timings, gallery, announcements and contact details."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --saffron: #ef8a17;
+      --saffron-deep: #da6e08;
+      --gold: #f7cf73;
+      --gold-rich: #d9a641;
+      --white: #fff;
+      --cream: #fffaf2;
+      --text: #33210f;
+      --muted: #705742;
+      --shadow: 0 12px 35px rgba(130, 78, 16, 0.18);
+      --radius: 18px;
+      --max: 1200px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 8%, rgba(255, 191, 79, 0.22), transparent 30%),
+        radial-gradient(circle at 90% 16%, rgba(239, 138, 23, 0.24), transparent 28%),
+        linear-gradient(180deg, #fffefb 0%, #fff9ef 100%);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+      letter-spacing: 0.4px;
+      text-align: center;
+      margin-bottom: 14px;
+      color: #6d3504;
+    }
+
+    .section-subtitle {
+      max-width: 760px;
+      margin: 0 auto 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 250, 242, 0.8);
+      border-bottom: 1px solid rgba(217, 166, 65, 0.35);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: "Cinzel", serif;
+      font-weight: 700;
+      color: #7d3f06;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--saffron), var(--gold-rich));
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(218, 110, 8, 0.35);
+      font-size: 1.05rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.96rem;
+      font-weight: 500;
+      color: #6f4b2b;
+    }
+
+    .nav-links a {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.26s ease;
+      background: linear-gradient(90deg, var(--saffron), var(--gold-rich));
+    }
+
+    .nav-links a:hover {
+      color: #9b4f0c;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 90vh;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 90px 0 70px;
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, rgba(88, 42, 7, 0.83), rgba(110, 58, 9, 0.72)),
+        url("https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=1700&q=80")
+          center/cover no-repeat;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(1px);
+      z-index: -1;
+      opacity: 0.25;
+    }
+
+    .hero::before {
+      width: 410px;
+      height: 410px;
+      background: radial-gradient(circle, #ffcf70 0%, transparent 62%);
+      top: -120px;
+      right: -120px;
+      animation: float 9s ease-in-out infinite;
+    }
+
+    .hero::after {
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, #f39d2f 0%, transparent 60%);
+      bottom: -130px;
+      left: -90px;
+      animation: float 11s ease-in-out infinite reverse;
+    }
+
+    .hero-card {
+      width: min(900px, 92%);
+      padding: clamp(22px, 4vw, 42px);
+      border-radius: 26px;
+      border: 1px solid rgba(255, 234, 191, 0.34);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(5px);
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .hero h1 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.2;
+      margin-bottom: 12px;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      color: #fff0d2;
+      font-size: clamp(1rem, 2vw, 1.16rem);
+      margin-bottom: 8px;
+    }
+
+    .hero .chant {
+      margin-top: 14px;
+      font-weight: 600;
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      color: #ffe6af;
+      letter-spacing: 0.8px;
+    }
+
+    .hero-actions {
+      margin-top: 26px;
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--saffron), var(--gold-rich));
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(220, 116, 17, 0.45);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.19);
+      color: #fff;
+      border: 1px solid rgba(255, 232, 184, 0.45);
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 15px 30px rgba(220, 116, 17, 0.55);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.28);
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(218, 110, 8, 0.16);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 40px rgba(130, 78, 16, 0.24);
+    }
+
+    .about-image {
+      min-height: 320px;
+      background:
+        linear-gradient(rgba(79, 37, 6, 0.2), rgba(79, 37, 6, 0.22)),
+        url("https://images.unsplash.com/photo-1628502610168-35e621b5ea4a?auto=format&fit=crop&w=1200&q=80")
+          center/cover no-repeat;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-image::after {
+      content: "Shri Shyam";
+      position: absolute;
+      right: 14px;
+      bottom: 14px;
+      background: rgba(255, 255, 255, 0.8);
+      color: #884005;
+      font-size: 0.84rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    .about-content {
+      padding: 26px;
+    }
+
+    .about-content h3 {
+      font-family: "Cinzel", serif;
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+      color: #7d3f06;
+    }
+
+    .about-content p {
+      color: #594431;
+      margin-bottom: 12px;
+    }
+
+    .about-highlights {
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .highlight {
+      background: linear-gradient(90deg, #fff7e8, #fffdfa);
+      border: 1px solid rgba(217, 166, 65, 0.22);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 0.94rem;
+      color: #6e4d2e;
+    }
+
+    /* Aarti */
+    .aarti-wrap {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .aarti-card {
+      padding: 28px;
+      text-align: center;
+    }
+
+    .aarti-card h4 {
+      font-family: "Cinzel", serif;
+      color: #7b3f05;
+      margin-bottom: 8px;
+      font-size: 1.3rem;
+    }
+
+    .aarti-time {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      color: #b25b0d;
+      margin: 10px 0 6px;
+    }
+
+    .aarti-note {
+      font-size: 0.94rem;
+      color: #7a654f;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      min-height: 180px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+      transform: translateZ(0);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .gallery-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(60, 29, 5, 0.55));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item span {
+      position: absolute;
+      left: 14px;
+      bottom: 12px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 500;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 18px 32px rgba(95, 55, 15, 0.32);
+    }
+
+    .gallery-item:hover::before,
+    .gallery-item:hover span {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .g1 { grid-column: span 4; }
+    .g2 { grid-column: span 4; }
+    .g3 { grid-column: span 4; }
+    .g4 { grid-column: span 6; }
+    .g5 { grid-column: span 6; }
+
+    /* Announcement */
+    .announcement {
+      background:
+        linear-gradient(135deg, rgba(239, 138, 23, 0.95), rgba(217, 166, 65, 0.92));
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .announcement h3 {
+      font-family: "Cinzel", serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+    }
+
+    .announcement p {
+      max-width: 780px;
+      margin: 0 auto;
+      font-size: 1.02rem;
+    }
+
+    .announcement .badge {
+      display: inline-block;
+      margin-inline: auto;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.14);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .contact-card {
+      padding: 26px;
+    }
+
+    .contact-card h4 {
+      font-family: "Cinzel", serif;
+      font-size: 1.3rem;
+      color: #7c3f07;
+      margin-bottom: 12px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      color: #5f4734;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .map-box {
+      min-height: 260px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(217, 166, 65, 0.25);
+      margin-top: 14px;
+    }
+
+    .map-box iframe {
+      border: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+    }
+
+    .footer {
+      padding: 30px 0 40px;
+      text-align: center;
+      color: #7a5a3d;
+      font-size: 0.94rem;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 80;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, #24c063, #0f9d4c);
+      box-shadow: 0 14px 30px rgba(12, 110, 53, 0.38);
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 20px 32px rgba(12, 110, 53, 0.45);
+    }
+
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Scroll animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes float {
+      0%,
+      100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 14px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header {
+        position: static;
+      }
+
+      .nav {
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+        height: auto;
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .aarti-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .g1, .g2, .g3, .g4, .g5 {
+        grid-column: auto;
+      }
+
+      .gallery-item {
+        min-height: 150px;
+      }
+
+      .whatsapp-float {
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    @media (max-width: 460px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Shri Khatu Shyam Mandir home">
+        <span class="brand-mark">🛕</span>
+        <span>Shri Khatu Shyam Mandir</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#aarti">Aarti Timings</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#announcement">Announcement</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Shri Khatu Shyam Mandir, Parikshitgarh (Meerut)</h1>
+        <p>A sacred place of devotion, peace, and spiritual grace.</p>
+        <p class="chant">Jai Shri Shyam</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#about">Explore Temple</a>
+          <a class="btn btn-secondary" href="#contact">Visit & Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">About the Temple</h2>
+        <p class="section-subtitle">
+          Shri Khatu Shyam Mandir in Parikshitgarh (Meerut) is a spiritual landmark where devotees gather with
+          faith, seek blessings, and celebrate divine traditions with unity and devotion.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-image" aria-label="Temple ambience image"></div>
+          <article class="card about-content">
+            <h3>Devotion, Discipline & Divine Blessings</h3>
+            <p>
+              The temple is dedicated to Lord Khatu Shyam Ji, revered for compassion and fulfillment of sincere prayers.
+              Daily darshan, bhajans, and festivals create a deeply uplifting spiritual atmosphere.
+            </p>
+            <p>
+              Located in Parikshitgarh, Meerut, the mandir serves as a sacred center for families and devotees from nearby
+              regions.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight">✨ Regular puja, bhajan and satsang programs</div>
+              <div class="highlight">🙏 Welcoming environment for all devotees</div>
+              <div class="highlight">📍 Easy access in Parikshitgarh (Meerut)</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="aarti" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Aarti Timings</h2>
+        <p class="section-subtitle">Join the daily aarti and experience divine peace and positive energy.</p>
+
+        <div class="aarti-wrap">
+          <article class="card aarti-card">
+            <h4>Morning Aarti</h4>
+            <div class="aarti-time">6:00 AM</div>
+            <p class="aarti-note">Prabhat aarti with soothing bhajans and morning prayers.</p>
+          </article>
+          <article class="card aarti-card">
+            <h4>Evening Aarti</h4>
+            <div class="aarti-time">7:00 PM</div>
+            <p class="aarti-note">Sandhya aarti with deepak darshan and spiritual chants.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Temple Gallery</h2>
+        <p class="section-subtitle">Moments of devotion, celebrations, and sacred temple ambience.</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item g1" style="background-image:url('https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=900&q=80')"><span>Temple Entrance</span></div>
+          <div class="gallery-item g2" style="background-image:url('https://images.unsplash.com/photo-1615966650071-855b15f29ad1?auto=format&fit=crop&w=900&q=80')"><span>Aarti Deep</span></div>
+          <div class="gallery-item g3" style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=900&q=80')"><span>Evening Illumination</span></div>
+          <div class="gallery-item g4" style="background-image:url('https://images.unsplash.com/photo-1605647540924-852290f6b0d5?auto=format&fit=crop&w=1200&q=80')"><span>Festive Decorations</span></div>
+          <div class="gallery-item g5" style="background-image:url('https://images.unsplash.com/photo-1536420124988-901b15f8fcb9?auto=format&fit=crop&w=1200&q=80')"><span>Devotee Gatherings</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="announcement" class="section reveal">
+      <div class="container">
+        <div class="announcement">
+          <span class="badge">Latest Announcement</span>
+          <h3>Special Sunday Bhajan Sandhya & Bhandara</h3>
+          <p>
+            All devotees are warmly invited every Sunday evening for special bhajan kirtan followed by prasad and bhandara.
+            Please arrive 20 minutes before evening aarti for smooth darshan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="container">
+        <h2 class="section-title">Contact & Location</h2>
+        <p class="section-subtitle">For darshan details, event updates, and seva enquiries, please connect with us.</p>
+
+        <div class="contact-grid">
+          <article class="card contact-card">
+            <h4>Temple Contact</h4>
+            <div class="contact-list">
+              <div class="contact-item"><strong>Address:</strong> <span>Parikshitgarh, Meerut, Uttar Pradesh, India</span></div>
+              <div class="contact-item"><strong>Phone:</strong> <span>+91 98XXXXXXXX</span></div>
+              <div class="contact-item"><strong>Email:</strong> <span>info@khatushyammandirparikshitgarh.org</span></div>
+              <div class="contact-item"><strong>Darshan Hours:</strong> <span>5:30 AM - 9:30 PM</span></div>
+            </div>
+          </article>
+
+          <article class="card contact-card">
+            <h4>Find Us on Map</h4>
+            <p style="color:#6f563f; margin-bottom: 8px;">Use the location map below for directions to the temple.</p>
+            <div class="map-box" aria-label="Map location of Shri Khatu Shyam Mandir">
+              <iframe
+                title="Shri Khatu Shyam Mandir Location"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Parikshitgarh%2C%20Meerut&output=embed"
+              ></iframe>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Shri Khatu Shyam Mandir, Parikshitgarh (Meerut). All rights reserved.</p>
+      <p>जय श्री श्याम</p>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/9198XXXXXXXX"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact on WhatsApp"
+    title="Contact on WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M19.11 17.28c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.49-.9-.8-1.5-1.79-1.67-2.09-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.08-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.62.72.23 1.38.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.69.25-1.29.17-1.42-.08-.12-.28-.2-.58-.35zM16.16 3.2C9.25 3.2 3.65 8.78 3.65 15.67c0 2.2.58 4.35 1.68 6.23L3.2 28.8l7.08-2.1c1.83 1 3.9 1.53 5.88 1.53h.01c6.9 0 12.5-5.58 12.5-12.47 0-6.89-5.6-12.56-12.51-12.56zm0 22.9h-.01c-1.86 0-3.68-.5-5.27-1.45l-.38-.23-4.2 1.25 1.27-4.09-.25-.42a10.2 10.2 0 0 1-1.56-5.45c0-5.62 4.59-10.2 10.24-10.2 2.72 0 5.27 1.05 7.18 2.96a10.1 10.1 0 0 1 2.99 7.2c-.01 5.62-4.6 10.2-10.25 10.2z"
+      ></path>
+    </svg>
+  </a>
+
+  <script>
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
